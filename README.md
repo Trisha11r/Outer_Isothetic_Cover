@@ -97,16 +97,20 @@ A vertex is classified according to the neighbouring UGBs occupancy.
 A UGB is said to be occupied if any of the pixel in that vertex has a pixel or cell occupied by the object.
 We check occupancy by deciding whether the boundaries of a cell have been intersected or not.
  
-  - C0  : Vertex with no neighbouring occupancy.
+(I) _C0  : Vertex with no neighbouring occupancy_
   <img src = "./Images/c0.png" width = "500">
-  - C1  : Only one cell is occupied. In such case suppose if previous direction of traversal was d, and the current cell occupied was of type t, then the next vertex will be in direction = (d+t)%4, Here t = 1, d = 3;
-  <img src = "./Images/c1.png" width = "500">
-  - C2A:	With adjacent occupancy. If two adjacent cells are occupied then new direction of traversal = (d+t)%4=0
+  
+(II) C1  : Only one cell is occupied. In such case suppose if previous direction of traversal was d, and the current cell occupied was of type t, then the next vertex will be in direction = (d+t)%4, Here t = 1, d = 3;
+<img src = "./Images/c1.png" width = "500">
+  
+(III) C2A:	With adjacent occupancy. If two adjacent cells are occupied then new direction of traversal = (d+t)%4=0
   d=0,t=0
-  <img src = "./Images/c2a.png" width = "500">
-  - C2B: With Diagonal Occupancy. Here, we have assume t=4, Hence, New direction = (d+4) % 4 .
-  <img src = "./Images/c2b.png" width = "500">
-  - C4: All cells are occupied. If all the neighbouring points are occupied then the point must be the interior point of the cover.
+<img src = "./Images/c2a.png" width = "500">
+  
+(IV) C2B: With Diagonal Occupancy. Here, we have assume t=4, Hence, New direction = (d+4) % 4  
+<img src = "./Images/c2b.png" width = "500">
+  
+(V) C4: All cells are occupied. If all the neighbouring points are occupied then the point must be the interior point of the cover.
 
 ## Results:
 ### Initial Image:
